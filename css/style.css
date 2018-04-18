@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Helper CSS */
+.clearfix:before,.clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.animation {
+    height:  100px;
+    width:  100px;
+    background:  red;
+    margin:  10px 10px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+}
+@keyframes example{
+    /*from{
+        background-color: aqua;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+    to{
+        background-color: black;
+        padding: 0;
+        border-radius: 100px;
+    }*/
+   /*  0%   {background-color: orchid;border-radius: 0px;}
+    25%  {background-color: yellow;border-radius: 25px;}
+    50%  {background-color: blue;border-radius: 50px;}
+    100% {background-color: green;border-radius: 100px;}*/
+    0%   {background-color: red; left:0px; top:0px;}
+    25%  {background-color: yellow; left:200px; top:0px;}
+    50%  {background-color: blue; left:200px; top:200px;}
+    75%  {background-color: green; left:0px; top:200px;}
+    100% {background-color: red; left:0px; top:0px;}
+}
+
+
+
+
+.fa {
+    font-size: 80px;
+    color: red;
+    animation-name: black-diamond;
+    animation-duration: 8s;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    animation-direction: reverse;    
+}
+@keyframes black-diamond{
+    0%{transform: translate(0px);}
+    25%{transform: translateX(420px);}
+    50%{transform: translateY(220px);}
+    100%{transform: translate(420px,220px);}
+    /*0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}*/
+}
+.animation-two {
+    background: aliceblue;
+    height: 300px;
+    width: 500px;
+    border: 1px solid #ddd;
+    margin: 40px auto;
+    position: relative;
+    animation-name: humayra;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+@keyframes humayra{
+    0%{background-color: azure;}
+    25%{background-color: black;}
+    50%{background-color: darkgray;}
+    100%{background-color: #ddd;}
+}
+
+
+/*
+Animation Property:
+
+1. animation-name;
+2. animation-duration;
+3. animation-delay;
+4. animation-iteration-count;
+5. animation-direction: alternate, reverse;
+6. animation-timing-function;
+
+
+#Shorten Property:
+#animation: animation-name animation-duration animation-delay animation-iteration-count;
+
+
+ Syntax 1:
+ =========
+
+** @keyframes{
+    from{
+        property: value;
+    }
+    to{
+        property: value;
+    }
+}
+
+
+Syntax 2:
+=========
+
+
+@keyframes {
+
+    0%{
+        property: value;
+    }
+    25%{
+        property: value;
+    }
+    50%{
+        property: value;
+    }
+    100%{
+        property: value;
+    }
+
+}
+
+*/
